@@ -35,7 +35,7 @@ function processfactors(){
   }
   let factors =parts[0].trim().split(" ").map(Number);
   let multiples =parts[1].trim().split(" ").map(Number);
-  let result = sumOfMultiples(factors,multiples):
+  let result = sumOfMultiples(factors,multiples);
   document.getElementById("output").innerText=result+":"+factors.join(" ")+":"+multiples.join(" ");
 }
   
