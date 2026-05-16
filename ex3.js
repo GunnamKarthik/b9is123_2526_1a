@@ -25,10 +25,11 @@ let listEuler2 = (a, l) => {
 
 let listEuler3 = (a, l) => {
     let sum = 0;
-    for (let x of a) {
         for (let n of l) {
+             for (let x of a) {
             if (n % x === 0) {
                 sum += n;
+                break;
             }
         }
     }
