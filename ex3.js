@@ -29,7 +29,6 @@ let listEuler3 = (a, l) => {
         for (let n of l) {
             if (n % x === 0) {
                 sum += n;
-                 break;
             }
         }
     }
