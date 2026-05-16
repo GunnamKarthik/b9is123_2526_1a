@@ -8,12 +8,36 @@
             //and a button to remove some
             //the remove function should update the weight
             //and let the user know when ok to proceed
-            let check=()=>{
+           let check=()=>{
               alert('Checking Baggage weight: '+parseInt(document.getElementById('weight').value));
-              //These should only display if it is actually overweight
-              document.getElementById('removed').style='display:block;'
-              document.getElementById('remB').style='display:block;'
+              if(parseInt(document.getElementById('weight').value)>15){
+              document.getElementById('removed').style='display:block';
+              document.getElementById('remB').style='display:block';
+              }
+              else{
+                  alert("Baggage is within limit.");
+                  document.getElementById('removed').style='display:none';
+              document.getElementById('remB').style='display:none';
+              }
             }
-            let remove=()=>alert('Removing weight: '+parseInt(document.getElementById('removed').value))
+            let remove=()=>{
+                alert('Removing weight: '+parseInt(document.getElementById('removed').value));
+                if(parseInt(document.getElementById('removed').value)>parseInt(document.getElementById('weight').value)){
+                    alert("cannot remove!!! Entered weight is more than current weight");
+                     return;
+                }
+                
+                let newWeight = parseInt(document.getElementById('weight').value) - parseInt(document.getElementById('removed').value);
 
-            //Test edit no. 2;
+    document.getElementById('weight').value = newWeight;
+
+    if (newWeight <= 15) {
+        alert("Baggage is within limit.");
+
+        document.getElementById('removed').style='display:none';
+              document.getElementById('remB').style='display:none';
+    } else {
+        alert("Still overweight... Current weight: " + newWeight + "kg");
+    }
+                
+            }
