@@ -29,8 +29,8 @@ let listEuler3 = (a, l) => {
         for (let n of l) {
             if (n % x === 0) {
                 sum += n;
+                 break;
             }
-            break;
         }
     }
     alert("sum of multiples of elements in list a, found in list l: " + sum);
