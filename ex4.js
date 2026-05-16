@@ -30,7 +30,7 @@ function processfactors(){
   let input = document.getElementById("inputStr").value;
   let parts=input.split(":");
   if(parts.length!==2){
-    document.getElementById("output").innerText="invalid format!";
+    alert("invalid format!");
     return;
   }
   let factors =parts[0].trim().split(" ").map(Number);
