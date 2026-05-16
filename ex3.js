@@ -30,6 +30,7 @@ let listEuler3 = (a, l) => {
             if (n % x === 0) {
                 sum += n;
             }
+            break;
         }
     }
     alert("sum of multiples of elements in list a, found in list l: " + sum);
@@ -43,8 +44,8 @@ let eulerlist = () => {
 };
 
 let euler2Lists = () => {
-    a = [2, 3]//can un-hardcode
-    l = [1, 2, 3, 4, 5, 6, 7, 9, 10, 10, 10]
+    a = document.getElementById('a2').value.split(" ").map((x => parseInt(x)));
+    l = document.getElementById('b2').value.split(" ").map((x => parseInt(x)));
     listEuler2(a, l);
 };
 
